@@ -34,5 +34,5 @@ Está hecho para jugarse en terminal desde linux.
 ## 🖥️ Cómo se ve en el terminal
 
 <div align="center">
-  <img src="asets/ctris.png" />
+  <img src="assets/Ctris.gif"/>
 </div>

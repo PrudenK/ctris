@@ -44,8 +44,7 @@ void imprimir_siguientes_fila(int fila) {
 }
 
 void imprimir_tablero() {
-    printf("\033[H\033[J");  // Limpia pantalla
-    printf("  TABLERO DE LA HOSTIA\n\n");
+    printf("\033[H\033[J\n\n");  // Limpia pantalla
 
     for (int i = 0; i < FILAS; i++) {
         for (int j = 0; j < COLUMNAS; j++) {
@@ -55,20 +54,27 @@ void imprimir_tablero() {
         printf("    ");
 
         switch (i) {
-            case FILAS - 20:
+            case FILAS -20:
+                printf("Desarrolado por PrudenK");
+                break;
+            case FILAS -19:
+                printf("En github: https://github.com/PrudenK/Ctris");
+                break;
+
+            case FILAS - 17:
                 printf("     Siguientes piezas");
                 break;
-            case FILAS - 18:
+            case FILAS - 15:
                 imprimir_siguientes_fila(0);
                 break;
-            case FILAS - 17:
+            case FILAS - 14:
                 imprimir_siguientes_fila(1);
                 break;
-            case FILAS - 16:
+            case FILAS - 13:
                 imprimir_siguientes_fila(2);
                 break;
 
-            case FILAS - 13:
+            case FILAS - 11:
                 if (pieza_hold != NULL) {
                     printf("Pieza en hold. (pulsa h)");
                 }else {
@@ -76,12 +82,12 @@ void imprimir_tablero() {
                 }
                 break;
 
-            case FILAS - 11:
-            case FILAS - 10:
             case FILAS - 9:
+            case FILAS - 8:
+            case FILAS - 7:
                 printf("      ");
                 if (copia_pieza_hold != NULL) {
-                    int fila = i - (FILAS - 11); // 0, 1 o 2
+                    int fila = i - (FILAS - 9); // 0, 1 o 2
                     if (fila < copia_pieza_hold->alto_m) {
                         for (int j = 0; j < copia_pieza_hold->ancho_m; j++) {
                             imprimir_celda(copia_pieza_hold->formas[0][fila][j]);
