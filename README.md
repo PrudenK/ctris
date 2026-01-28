@@ -9,27 +9,30 @@ Está hecho para jugarse en terminal desde linux.
 
 ## 🎮 Para jugar
 
-1. 🔽 **Clona el repositorio**
-   ```bash
-   git clone https://github.com/PrudenK/Ctris.git
-   ```
+### 🧩 Requisitos
+- Linux
+- CMake ≥ 3.16
+- Compilador **C** (gcc o clang)
 
-2. 🛠️ **Abre tu archivo `.bashrc`**
-   ```bash
-   nano ~/.bashrc
-   ```
+### 🚀 Pasos
 
-3. 🧩 **Añade este alias** (ajusta la ruta a tu proyecto):
-   ```bash
-   alias ctris='cmake -S ~/CLionProjects/Ctris -B ~/CLionProjects/Ctris/build && cmake --build ~/CLionProjects/Ctris/build && ~/CLionProjects/Ctris/build/Ctris'
-   ```
+#### 1. 🔽 Clona el repositorio
 
-4. 🔄 **Aplica los cambios**
-   ```bash
-   source ~/.bashrc
-   ```
+    git clone https://github.com/PrudenK/Ctris.git
 
-5. 🚀 **Ejecuta `ctris` en tu terminal y juega**
+#### 2. 📂 Entra al directorio del proyecto
+
+    cd Ctris
+
+#### 3. 🛠️ Configura y compila
+
+    mkdir build
+    cmake -S . -B build
+    cmake --build build
+
+#### 4. ▶️ Ejecuta el juego
+
+    ./build/Ctris
 
 ## 🖥️ Cómo se ve en el terminal
 
